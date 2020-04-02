@@ -30,13 +30,20 @@ def rotate(list_nums, k):
 if __name__ == "__main__":
     given = [8, 5, 3, 7, 1, 2]
     # Normal Cases
-    print(given)
-    print(rotate(given, -2))
+    print("Normal case")
+    print(f"Given list: {given} \nk = 2")
+    print(rotate(given, 2))
 
     # Edge Cases
-    print(given)
+    print("\nk = len(given)")
+    print(f"Given list: {given} \nk = 6")
     print(rotate([8, 5, 3, 7, 1, 2], 6))
 
-    given = [1, 2]
-    print(given)
-    print(rotate([1, 2], -1))
+    print("\nk < 0")
+    print(f"Given list: {given} \nk = -2")
+    print(rotate(given, -2))
+
+    # Empty values
+    given = []
+    print(f"Given list: {given} \nk = -1")
+    print(rotate(given, -1))
